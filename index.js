@@ -21,6 +21,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1', courseRoutes)
 app.use('/api/v1', studentRoutes)
 
+const PORT = process.env.PORT || 3000;
+
 connectDB()
     .then(() => {
         app.listen(process.env.PORT, () => {
